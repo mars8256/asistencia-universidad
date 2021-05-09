@@ -23,8 +23,10 @@ public class CursoCatedratico {
 	@ManyToOne
 	@JoinColumn(name="id_catedratico",nullable = false, foreignKey = @ForeignKey(name = "curso_catedratico_catedratico"))
 	Catedratico catedratico;
-	@Column(name = "horario", nullable = false, length = 5)
-	String horario;
+	@Column(name = "hora_inicio", nullable = false, length = 5)
+	String horaInicio;
+	@Column(name = "hora_fin", nullable = false, length = 5)
+	String horaFin;
 	@Column(name = "dia_semana", nullable = false)
 	Integer diaSemana;
 	@Column(name = "anio", nullable = false)
@@ -51,12 +53,7 @@ public class CursoCatedratico {
 	public void setCatedratico(Catedratico catedratico) {
 		this.catedratico = catedratico;
 	}
-	public String getHorario() {
-		return horario;
-	}
-	public void setHorario(String horario) {
-		this.horario = horario;
-	}
+
 	public Integer getDiaSemana() {
 		return diaSemana;
 	}
@@ -74,6 +71,18 @@ public class CursoCatedratico {
 	}
 	public void setSemestre(Integer semestre) {
 		this.semestre = semestre;
+	}
+	public String getHoraInicio() {
+		return horaInicio;
+	}
+	public void setHoraInicio(String horaInicio) {
+		this.horaInicio = horaInicio;
+	}
+	public String getHoraFin() {
+		return horaFin;
+	}
+	public void setHoraFin(String horaFin) {
+		this.horaFin = horaFin;
 	}
 	
 	

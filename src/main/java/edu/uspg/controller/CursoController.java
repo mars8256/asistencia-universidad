@@ -4,7 +4,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +26,7 @@ import edu.uspg.service.ICursoService;
 @RequestMapping("/curso")
 public class CursoController {
 
+	@Autowired
 	private ICursoService service;
 	
 	/*LIST ALL*/
